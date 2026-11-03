@@ -25,3 +25,13 @@ The architecture includes:
 - PHP
 - HTML/CSS
 - Git and GitHub
+
+## Architecture
+
+The application is deployed inside a custom AWS VPC.
+
+A public EC2 instance is located in the public subnet and can communicate with the internet through an Internet Gateway. A private EC2 instance is isolated from direct internet access.
+
+The public instance also acts as a bastion host, allowing secure SSH access to the private instance.
+
+Application data is stored in a private Amazon S3 bucket. EC2 accesses the bucket using an IAM role attached through an instance profile, avoiding the need to store AWS access keys on the server.
