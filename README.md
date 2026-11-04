@@ -40,4 +40,13 @@ Application data is stored in a private Amazon S3 bucket. EC2 accesses the bucke
 
 The diagram below shows the AWS architecture used in ACE Cloud Explorer.
 
-![ACE Cloud Explorer Architecture](architecture/ACE-architecture.png)
+![ACE Cloud Explorer Architecture](architecture/architecture.png)
+
+## How the Architecture Works
+
+1. The user accesses the ACE Cloud Explorer web application through the public EC2 instance.
+2. The public EC2 instance is hosted inside a public subnet connected to an Internet Gateway.
+3. Application data is stored in a private Amazon S3 bucket.
+4. The EC2 instance accesses S3 through an IAM role attached to the instance, so AWS access keys do not need to be stored in the application.
+5. A private EC2 instance is placed inside the private subnet and cannot be accessed directly from the internet.
+6. Administrative access to the private instance is performed through the public EC2 instance acting as a bastion host.
