@@ -35,3 +35,9 @@ A public EC2 instance is located in the public subnet and can communicate with t
 The public instance also acts as a bastion host, allowing secure SSH access to the private instance.
 
 Application data is stored in a private Amazon S3 bucket. EC2 accesses the bucket using an IAM role attached through an instance profile, avoiding the need to store AWS access keys on the server.
+
+## Architecture Diagram
+
+The diagram below shows the AWS architecture used in ACE Cloud Explorer.
+
+![ACE Cloud Explorer Architecture](architecture/ACE-architecture.png)
