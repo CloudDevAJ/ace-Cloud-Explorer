@@ -70,3 +70,19 @@ Cloud service data is stored in a private S3 bucket and retrieved by the EC2 app
 The private EC2 instance has no public IP address and is accessed through the public EC2 instance acting as a bastion host.
 
 ![Private EC2 Access](Screenshots/private-ec2-access.jpg)
+
+## Challenges and Troubleshooting
+
+### Accessing the Private EC2 Instance
+
+One challenge during the project was securely accessing the EC2 instance inside the private subnet.
+
+The private instance does not have a public IP address, so it cannot be accessed directly from the internet. The public EC2 instance was used as a bastion host to reach the private instance through its private IP address.
+
+This helped demonstrate how private cloud resources can remain isolated from direct internet access while still allowing controlled administrative access.
+
+### Accessing S3 Without Hard-Coded Credentials
+
+The application needed permission to retrieve the `services.json` file from Amazon S3.
+
+Instead of storing AWS access keys inside the application, an IAM role was attached to the EC2 instance through an instance profile. This allowed the application to access the required S3 object securely using temporary AWS credentials provided by the instance role.
