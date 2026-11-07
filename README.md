@@ -50,3 +50,23 @@ The diagram below shows the AWS architecture used in ACE Cloud Explorer.
 4. The EC2 instance accesses S3 through an IAM role attached to the instance, so AWS access keys do not need to be stored in the application.
 5. A private EC2 instance is placed inside the private subnet and cannot be accessed directly from the internet.
 6. Administrative access to the private instance is performed through the public EC2 instance acting as a bastion host.
+
+## Project Screenshots
+
+### ACE Cloud Explorer Web Application
+
+The application dynamically displays AWS cloud service information retrieved from Amazon S3.
+
+![ACE Cloud Explorer Web Application](screenshots/ace-home-page.png)
+
+### Amazon S3 Data Source
+
+Cloud service data is stored in a private S3 bucket and retrieved by the EC2 application using an IAM role.
+
+![Amazon S3 Data](screenshots/s3-services-data.png)
+
+### Private EC2 Access
+
+The private EC2 instance has no public IP address and is accessed through the public EC2 instance acting as a bastion host.
+
+![Private EC2 Access](screenshots/private-ec2-access.png)
