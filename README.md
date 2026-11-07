@@ -57,7 +57,7 @@ The diagram below shows the AWS architecture used in ACE Cloud Explorer.
 
 The application dynamically displays AWS cloud service information retrieved from Amazon S3.
 
-![ACE Cloud Explorer Web Application](screenshots/ACE_web_app_interface_1.jpg)
+![ACE Cloud Explorer Web Application](Screenshots/ACE web app interface 1.jpg)
 
 ### Amazon S3 Data Source
 
