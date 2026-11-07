@@ -57,16 +57,16 @@ The diagram below shows the AWS architecture used in ACE Cloud Explorer.
 
 The application dynamically displays AWS cloud service information retrieved from Amazon S3.
 
-![ACE Cloud Explorer Web Application](Screenshots/ACE web app interface 1.jpg)
+![ACE Cloud Explorer Web Application](Screenshots/ace-home-page.jpg)
 
 ### Amazon S3 Data Source
 
 Cloud service data is stored in a private S3 bucket and retrieved by the EC2 application using an IAM role.
 
-![Amazon S3 Data](screenshots/s3-object_in_bucket.jpg)
+![Amazon S3 Data](Screenshots/s3-services-data.jpg)
 
 ### Private EC2 Access
 
 The private EC2 instance has no public IP address and is accessed through the public EC2 instance acting as a bastion host.
 
-![Private EC2 Access](screenshots/ec2-private_details.jpg)
+![Private EC2 Access](Screenshots/private-ec2-access.jpg)
