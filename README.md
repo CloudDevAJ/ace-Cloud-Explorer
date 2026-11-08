@@ -103,4 +103,22 @@ The ACE Cloud Explorer environment was deployed manually in AWS to understand ho
 9. Upload `services.json` to a private Amazon S3 bucket.
 10. Attach an IAM instance profile to the public EC2 instance with permission to access the required S3 object.
 11. Deploy the ACE Cloud Explorer application to the web server.
-12. Test the web application and verify access to the private instance through the bastion host.
+12. Test the web application and verify access to the private instance through the bastion host
+## What I Learned
+
+This project helped me understand how multiple AWS services work together as part of a complete cloud architecture.
+
+I gained practical experience with:
+
+- Designing a VPC with public and private subnets.
+- Configuring Internet Gateways and route tables.
+- Launching and configuring EC2 instances.
+- Understanding the difference between public and private cloud resources.
+- Using a bastion host to access an EC2 instance that does not have a public IP address.
+- Storing application data in Amazon S3.
+- Using IAM roles so applications can access AWS services without hard-coded access keys.
+- Configuring security groups to control network access.
+- Deploying and troubleshooting a web application on a Linux EC2 instance.
+- Documenting a cloud architecture using diagrams and screenshots.
+
+One of the most useful lessons from this project was understanding that cloud security is not based on a single service. Network design, IAM permissions, routing, and security groups all work together to control how resources can be accessed.
