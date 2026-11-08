@@ -86,3 +86,21 @@ This helped demonstrate how private cloud resources can remain isolated from dir
 The application needed permission to retrieve the `services.json` file from Amazon S3.
 
 Instead of storing AWS access keys inside the application, an IAM role was attached to the EC2 instance through an instance profile. This allowed the application to access the required S3 object securely using temporary AWS credentials provided by the instance role.
+## Setup and Deployment
+
+The ACE Cloud Explorer environment was deployed manually in AWS to understand how the individual cloud services connect together.
+
+### Deployment Steps
+
+1. Create a custom VPC.
+2. Create a public subnet and a private subnet.
+3. Attach an Internet Gateway to the VPC.
+4. Configure the public route table to send internet traffic through the Internet Gateway.
+5. Launch the public EC2 instance in the public subnet.
+6. Launch the private EC2 instance in the private subnet without a public IP address.
+7. Configure security groups to allow only the required traffic.
+8. Install Apache and PHP on the public EC2 instance.
+9. Upload `services.json` to a private Amazon S3 bucket.
+10. Attach an IAM instance profile to the public EC2 instance with permission to access the required S3 object.
+11. Deploy the ACE Cloud Explorer application to the web server.
+12. Test the web application and verify access to the private instance through the bastion host.
