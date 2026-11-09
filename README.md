@@ -122,3 +122,15 @@ I gained practical experience with:
 - Documenting a cloud architecture using diagrams and screenshots.
 
 One of the most useful lessons from this project was understanding that cloud security is not based on a single service. Network design, IAM permissions, routing, and security groups all work together to control how resources can be accessed.
+## Repository Structure
+
+```text
+ace-cloud-explorer/
+├── app/
+│   └── Web application files
+├── architecture/
+│   └── AWS architecture diagram
+├── screenshots/
+│   └── Project screenshots
+├── README.md
+└── .gitignore
