@@ -134,3 +134,14 @@ ace-cloud-explorer/
 │   └── Project screenshots
 ├── README.md
 └── .gitignore
+## Future Improvements
+
+The current version of ACE Cloud Explorer demonstrates the core AWS architecture and secure access design. Future improvements could include:
+
+- Rebuilding the AWS infrastructure using Terraform or AWS CloudFormation.
+- Adding automated deployment using GitHub Actions.
+- Adding Amazon CloudWatch monitoring and logging.
+- Separating the bastion host and web server into dedicated EC2 instances.
+- Improving IAM permissions by applying more restrictive least-privilege policies.
+- Adding a NAT Gateway if the private instance requires controlled outbound internet access.
+- Expanding the application to display additional AWS service information.
