@@ -25,7 +25,16 @@ The architecture includes:
 - PHP
 - HTML/CSS
 - Git and GitHub
+## Key Features
 
+- AWS VPC with public and private subnets
+- Public EC2 web server hosting the ACE Cloud Explorer application
+- Private EC2 instance protected from direct internet access
+- Bastion-host access to private infrastructure
+- Private Amazon S3 bucket used as the application's data source
+- IAM instance profile for S3 access without hard-coded AWS credentials
+- Dynamic service information loaded from `services.json`
+- Security groups used to control access between resources
 ## Architecture
 
 The application is deployed inside a custom AWS VPC.
