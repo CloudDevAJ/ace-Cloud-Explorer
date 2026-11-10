@@ -1,0 +1,15 @@
+# SSH private keys
+*.pem
+*.ppk
+
+# Environment files
+.env
+.env.*
+
+# Temporary files
+*.log
+*.tmp
+
+# Windows/macOS system files
+Thumbs.db
+.DS_Store
